@@ -1,0 +1,36 @@
+:root{
+    --universe: #090909;
+    --star: #ff9f1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--universe);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    background: var(--star);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--star);
+    animation: animate 4s infinite ease-in-out;
+}
+
+@keyframes animate {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
